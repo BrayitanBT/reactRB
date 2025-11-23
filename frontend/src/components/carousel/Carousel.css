@@ -1,0 +1,101 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+  height: 500px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  inset: 0;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.caption h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.caption p {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.caption span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* Flechas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.arrow.left {
+  left: 15px;
+}
+
+.arrow.right {
+  right: 15px;
+}
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}

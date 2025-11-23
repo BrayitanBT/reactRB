@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+  font-family: "Open Sans", sans-serif;
+}
+.aboutSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Imagen con franjas diagonales tipo KFC */
+.imageContainer {
+  flex: 1;
+  min-width: 350px;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.9);
+}
+
+/* Franjas diagonales (rojas y blancas) */
+.overlayStripes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #c8102e,
+    #c8102e 40px,
+    #ffffff 40px,
+    #ffffff 80px
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.1;
+}
+
+/* Texto */
+.textContainer {
+  flex: 1;
+  min-width: 350px;
+  padding: 60px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #c8102e;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.separator {
+  width: 70px;
+  height: 5px;
+  background-color: #000;
+  margin-bottom: 25px;
+}
+
+.text {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.button {
+  align-self: flex-start;
+  padding: 12px 28px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #c8102e;
+  transform: translateY(-3px);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .aboutSection {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    height: 300px;
+  }
+
+  .textContainer {
+    padding: 40px 25px;
+    text-align: center;
+  }
+
+  .button {
+    align-self: center;
+  }
+
+  .separator {
+    margin: 10px auto 25px auto;
+  }
+}
+.container {
+  width: 100%;
+  padding: 40px 80px;
+  background-color: #f9f9f9;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.cardImg {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 24px;
+}
+
+.cardContent h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.cardContent p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.btn {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffb300;
+}

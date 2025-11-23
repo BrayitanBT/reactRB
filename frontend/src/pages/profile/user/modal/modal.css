@@ -1,0 +1,360 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.medium-modal {
+  width: 600px;
+}
+
+.large-modal {
+  width: 900px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e8ecef;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6c757d;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #dc3545;
+  background-color: #fff5f5;
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Estilos específicos para el modal de detalles de órdenes */
+.order-details-modal {
+  padding: 0;
+}
+
+.selected-order-badge {
+  background: #e3f2fd;
+  padding: 0.75rem 2rem;
+  border-bottom: 1px solid #bbdefb;
+}
+
+.selected-order-badge small {
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.order-info-section {
+  padding: 2rem;
+  border-bottom: 1px solid #e8ecef;
+}
+
+.order-info-section h3 {
+  margin: 0 0 1.5rem 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.info-item strong {
+  color: #495057;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-item span {
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.products-section {
+  padding: 2rem;
+  border-bottom: 1px solid #e8ecef;
+}
+
+.products-section h3 {
+  margin: 0 0 1.5rem 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e8ecef;
+  transition: all 0.2s ease;
+}
+
+.product-item:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.product-info strong {
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.product-info span {
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.product-total {
+  color: #28a745;
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-width: 100px;
+  text-align: right;
+}
+
+.order-total-section {
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-top: 1px solid #dee2e6;
+}
+
+.order-total {
+  text-align: right;
+}
+
+.order-total strong {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  background: white;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Scroll personalizado para el modal */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive para modal de órdenes */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+    margin: 1rem;
+  }
+  
+  .medium-modal,
+  .large-modal {
+    width: auto;
+  }
+  
+  .modal-header {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .order-info-section,
+  .products-section {
+    padding: 1.5rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .info-item {
+    padding: 0.5rem;
+  }
+  
+  .product-item {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  
+  .product-total {
+    text-align: left;
+    min-width: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .order-total-section {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .order-total {
+    text-align: center;
+  }
+  
+  .order-total strong {
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+  }
+}
+
+/* Animaciones adicionales */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-item {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.product-item:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+/* Estados de hover mejorados */
+.modal-overlay {
+  transition: background-color 0.3s ease;
+}
+
+.modal-content {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efectos de profundidad */
+.modal-overlay {
+  perspective: 1000px;
+}
+
+.modal-content {
+  transform-style: preserve-3d;
+}

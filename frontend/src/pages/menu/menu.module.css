@@ -1,0 +1,51 @@
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  background: #f8f9fa;
+}
+
+.buttons {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #007bff;
+  background: white;
+  color: #007bff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.buttons:hover {
+  background: #007bff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.buttonActive {
+  background: #007bff;
+  color: white;
+}
+
+.targetsContainer {
+  padding: 2rem;
+  min-height: 60vh;
+}
+
+@media (max-width: 768px) {
+  .buttonsContainer {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .buttons {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .targetsContainer {
+    padding: 1rem;
+  }
+}
